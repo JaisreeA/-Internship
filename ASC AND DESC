@@ -1,0 +1,21 @@
+-- create a table
+CREATE TABLE students (
+  ID INT,
+  NAME varchar(20),
+  GENDER varchar(20)
+);
+-- insert some values
+INSERT INTO students VALUES (1, 'jai', 'F');
+INSERT INTO students VALUES (3, 'josh', 'F');
+INSERT INTO students VALUES (5, 'rohn', 'M');
+INSERT INTO students VALUES (2, 'abitha', 'F');
+INSERT INTO students VALUES (4, 'dharsh',   'F');
+INSERT INTO students VALUES (9, 'raghu', 'M');
+INSERT INTO students VALUES (10, 'raja', 'M');
+INSERT INTO students VALUES (6, 'anu', 'F');
+INSERT INTO students VALUES (7, 'davidgoggins', 'M');
+INSERT INTO students VALUES (8, 'amen',   'M');
+
+-- desc,asc,order by
+SELECT * FROM students ORDER BY ID ;
+SELECT * FROM students ORDER BY ID DESC;
