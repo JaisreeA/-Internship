@@ -1,0 +1,33 @@
+-- create a table
+CREATE TABLE student(
+    rollno INT,
+    name varchar(20),
+    age INT
+);
+
+CREATE TABLE course(
+    courseid INT,
+    rollno INT,
+    course1 varchar(20),
+    course2 varchar(20)
+);
+
+INSERT INTO student VALUES(1,'david  ',20);
+INSERT INTO student VALUES(2,'goggins',19);
+INSERT INTO student VALUES(3,'faf    ',30);
+INSERT INTO student VALUES(4,'jai    ',18);
+INSERT INTO student VALUES(5,'deep   ',23);
+INSERT INTO course VALUES('9901',1,'maths','bio');
+INSERT INTO course VALUES('9902',2,'tamil','maths');
+INSERT INTO course VALUES('9903',3,'chemistry','tamil');
+INSERT INTO course VALUES('9904',4,'maths','chemistry');
+INSERT INTO course VALUES('9905',5,'physics','tamil');
+ 
+-- inner join
+SELECT student.name,student.rollno,course.rollno FROM student INNER JOIN course ON student.rollno = course.rollno;
+-- left join
+SELECT * FROM student LEFT JOIN course ON student.rollno = course.rollno;
+-- right join
+SELECT * FROM student RIGHT JOIN course ON student.rollno = course.rollno;
+-- full join
+SELECT * FROM student FULL JOIN course ON student.rollno = course.rollno;
